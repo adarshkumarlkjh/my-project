@@ -14,7 +14,7 @@ warnings.filterwarnings('ignore')
 def load_data(file_path):
     """Loads the dataset from the specified path."""
     try:
-        data = pd.read_csv(file_path)
+        data = pd.read_csv('fraudTrain.csv')
         # Drop the unnamed column if it exists
         if 'Unnamed: 0' in data.columns:
             data = data.drop(columns=['Unnamed: 0'])
